@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body{
+
+    height: 100vh;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+.sidebar{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 35%;
+    transition: transform 0.5s ease-in;
+}
+.sidebar > div{
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main{
+    position: absolute;
+    top: 35%;
+    left: 0;
+    height: 65%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    transition: transform .5s ease-in;
+}
+.main > div{
+    min-width: 100%;
+    min-height: 100%;       
+}
+.buttons{
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    transform: translateY(-50%);
+    
+    z-index: 100;    
+}
+.buttons > div{
+    background: white;
+    transform: translate(-100%);
+}
+.button > i{
+    padding: 10px 15px;
+    font-size: 20px;
+    color: gray;
+}
+.button > i:hover {
+    color: black;
+}
+.button.left{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.button.right{
+    transform: translateX(0%);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
