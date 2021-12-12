@@ -4,7 +4,6 @@ const left = document.querySelector('.button.left'),
       textBlocks = sidebar.querySelector('.sidebar > div'),
       main = document.querySelector('.main'),
       slidesCount = main.querySelectorAll('.main > div').length;
-console.log(slidesCount);
 
 let slideIndex = 0;
 sidebar.style.left = `-${(slidesCount - 1) * 100}vw`;
@@ -28,8 +27,6 @@ function changeSlide(btn){
             slideIndex = slidesCount - 1;
         }
     }
-    console.log(`SlideIndex = ${slideIndex}`);
-
     
     sidebar.style.transform =  `translateX(${100 * slideIndex}vw)`;
     main.style.transform = `translateX(-${100 * slideIndex}vw)`;
